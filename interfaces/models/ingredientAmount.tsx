@@ -2,7 +2,7 @@ import { Ingredient } from './ingredient';
 import { Unit } from './unit';
 
 export interface IngredientAmount {
-  unit: Unit;
+  unitId: Unit;
   amount: number;
   ingredientId: Ingredient;  
 }

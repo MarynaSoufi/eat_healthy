@@ -1,0 +1,39 @@
+.info_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image_wrapper {
+  width: 60%;  
+}
+
+.image_wrapper > div {
+  position: unset !important;
+}
+
+.image {
+  cursor: pointer;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+
+.icons_wrapper {
+  width: 30%;
+  
+}
+
+.recipe_wraper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe_method {
+  width: 55%;
+}
+
+.recipe_ingredint {
+  width: 30%;
+}

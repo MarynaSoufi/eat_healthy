@@ -9,3 +9,9 @@ module.exports = withNextEnv({
     token: 'a2ad4d5d2ec007e53ccfd6f8504057',
   },
 });
+
+module.exports = {
+  images: {
+    domains: ['www.datocms-assets.com'],
+  },
+}

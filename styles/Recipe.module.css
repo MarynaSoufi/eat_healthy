@@ -1,10 +1,24 @@
 .card {
   width: 30%;
 }
+
+.imageContainer {
+  width: 100%;
+}
+
+.imageContainer > div {
+  position: unset !important;
+}
+
 .image {
   cursor: pointer;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
 
 .card_descr {
   font-size: 1rem;
 }
+

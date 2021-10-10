@@ -12,5 +12,5 @@ export interface Recipe {
   cookTime: number;
   preparationTime: number;
   createdAt: Date;
-  ingredientAmount: IngredientAmount;
+  ingredientAmount: IngredientAmount[];
 }

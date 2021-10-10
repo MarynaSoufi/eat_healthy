@@ -32,16 +32,6 @@ const RECIPE_DETAILS_QUERY = `query RecipeDetails($id: ItemId) {
   }
 }`;
 
-// export async function getStaticProps() {
-//   const data = await request({
-//     query: RECIPE_DETAILS_QUERY,
-//     variables: { id: "64310946" }
-//   });
-
-//   return {
-//     props: { data }
-//   };
-// }
 
 Home.getInitialProps = async ({ query }: { query: { id: string } }) => {
   if (!query.id) {
