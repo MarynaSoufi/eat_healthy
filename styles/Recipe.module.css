@@ -1,7 +1,14 @@
 .card {
-  width: 30%;
+  width: 48%;
+  margin-bottom: 3rem;
 }
 
+@media(max-width: 1023px) {
+  .card {
+    width: 100%;
+    
+  }
+}
 .imageContainer {
   width: 100%;
 }

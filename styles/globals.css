@@ -18,10 +18,18 @@ a {
 }
 
 .container {
-  width: 90%;
-  padding: 2rem;
+  width: 95%;
+  padding: 1rem;
   margin: 0 auto;
 }
+
+@media(max-width:1024px) {
+  .container {
+    width: 98%;
+    padding: .5rem;
+  }
+}
+
 
 ul {
   list-style: none;
@@ -35,7 +43,19 @@ img {
 .image_wrapper {
   width: 20rem;
   margin: 0 auto;
- 
- 
+}
+@media(max-width:767px) {
+  .image_wrapper {
+    width: 10rem;
+    
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-top: 1px solid black;
 }
 

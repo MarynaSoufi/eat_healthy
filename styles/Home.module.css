@@ -9,6 +9,9 @@
  margin: 4rem 0;
  font-weight: normal;
 }
+@media(max-width: 767px) {
+  
+}
 .header::before,
 .header::after {
     display: inline-block;
@@ -17,4 +20,13 @@
     width: 8rem;
     margin: 0 1rem;
     transform: translateY(-.5rem);
+}
+@media(max-width: 767px) {
+  .header::before,
+  .header::after {
+    width: 3rem;
+}
+.header {
+  font-size: 1.25rem;
+   }
 }

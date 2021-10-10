@@ -5,4 +5,19 @@
   background-size: cover;
   height: 40rem;
   margin: 4rem 0;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+@media(max-width:600px) {
+  .hero_wrapper {
+    height: 15rem;
+  }
+}
+
+
+@media(min-width:601px) and (max-width:767px) {
+  .hero_wrapper {
+    height: 20rem;
+  }
 }

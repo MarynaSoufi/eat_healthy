@@ -1,6 +1,7 @@
 import React from 'react'
 import profilePic from '../public/cover.png'
 import Image from 'next/image'
+import { Footer } from './Footer'
 
 
 
@@ -10,14 +11,18 @@ interface Props {
 
 export const Layout = ({children}:Props) => {
   return (
-    <div className="container">
-      <a href="/">
-      <div className="image_wrapper">
-          <Image className="logo" src={profilePic} alt="logo" />
+    <>
+      <div className="container">
+        <a href="/">
+        <div className="image_wrapper">
+            <Image className="logo" src={profilePic} alt="logo" />
+        </div>
+        <hr />
+        </a>
+        
+        {children}
       </div>
-      <hr />
-      </a>
-      {children}
-    </div>
+    <Footer/>
+    </>
   )
 }

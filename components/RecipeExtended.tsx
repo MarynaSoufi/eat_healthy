@@ -1,9 +1,11 @@
 import React from 'react'
 import { Recipe } from '../interfaces/models/recipe'
 import Image from 'next/image'
+import personPic from '../public/user.png'
+import timePic from '../public/time.png'
 import { Ingredient } from './Ingredient'
 import styles from '../styles/RecipeExtended.module.css';
-
+import { checkForNegativeAttribute } from '../helpers/recipeHelper'
 
 interface Props {
   recipe: Recipe; 
@@ -13,6 +15,8 @@ export const RecipeExtendedComponent = (props: Props) => {
   const { recipe } = props;
   const { name, content, cookTime, servings, preparationTime, image, ingredientAmount } = recipe; 
   
+  const isNotVegan = checkForNegativeAttribute(ingredientAmount, "vegan");
+  const isNotVegeterian = checkForNegativeAttribute(ingredientAmount, "vegeterian");
   return (
     <div>
       <h2>{name}</h2>
@@ -22,24 +26,25 @@ export const RecipeExtendedComponent = (props: Props) => {
         </div>
         <div  className={styles.icons_wrapper}>
           <div>
-  
+            <span> {!isNotVegan && "Dieet: VEGAN"}</span>
+            <br/>
+            <span> {!isNotVegeterian && "Dieet: VEGETERIAN"}</span>
           </div>
           <div>
-            <span>{servings}</span>
+            <span>Servings: {servings} persons</span>
           </div>
           <div>
-            <span>preparation</span>
-            <span>{preparationTime}</span>
+            <span>Preparation Time: </span>
+            <span>{preparationTime} min</span>
           </div>
           <div>
-            <span>cook</span>
-            <span>{cookTime}</span>
+            <span>Cook Time: </span>
+            <span>{cookTime} min</span>
           </div>
         </div>
       </div>
      
       
-      <hr />
       <div className={styles.recipe_wraper}>
         <div className={styles.recipe_ingredint}>
             <h3>Ingredients</h3>

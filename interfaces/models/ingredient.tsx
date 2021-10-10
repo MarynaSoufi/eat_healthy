@@ -3,3 +3,9 @@ export interface Ingredient {
   vegan: boolean;
   vegeterian: boolean;
 }
+
+export enum IngredientAttribute {
+  All = 1,
+  Vegan,
+  Vegeterian
+}
