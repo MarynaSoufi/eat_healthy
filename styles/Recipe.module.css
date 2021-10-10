@@ -1,0 +1,10 @@
+.card {
+  width: 30%;
+}
+.image {
+  cursor: pointer;
+}
+
+.card_descr {
+  font-size: 1rem;
+}

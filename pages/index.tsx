@@ -1,6 +1,7 @@
 import React from 'react';
 import { GetAllRecipesResponse } from '../interfaces/api/getAllRecipesResponse';
 import { HomePage } from '../components/Home';
+import { Layout } from '../components/Layout';
 import { request } from '../lib/datocms';
 
 const HOMEPAGE_QUERY = `query HomePage {
@@ -43,5 +44,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data } : { data: GetAllRecipesResponse }) {
-  return <HomePage recipes={data.allRecipes} />;
+  return  <>
+  <Layout><HomePage recipes={data.allRecipes} /></Layout>
+  </>;
 }

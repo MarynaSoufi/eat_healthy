@@ -2,6 +2,7 @@ import React from 'react';
 import { request } from '../../lib/datocms';
 import { GetRecipeByIdResponse } from '../../interfaces/api/getRecipeByIdResponse';
 import { RecipeExtendedComponent } from '../../components/RecipeExtended';
+import { Layout } from '../../components/Layout';
 
 const RECIPE_DETAILS_QUERY = `query RecipeDetails($id: ItemId) {
   recipe(filter: { id: { eq: $id } }) {
@@ -59,5 +60,9 @@ export default function Home({ data }: { data: GetRecipeByIdResponse }) {
   if (!data) {
     return <p>NO DATA</p>
   }
-  return <RecipeExtendedComponent recipe={data.recipe} />;
+  return  <>
+  <Layout>
+  <RecipeExtendedComponent recipe={data.recipe} />
+  </Layout>
+  </>;
 }
