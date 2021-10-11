@@ -13,7 +13,7 @@ interface Props {
 
 export const RecipeExtendedComponent = (props: Props) => {
   const { recipe } = props;
-  const { name, content, cookTime, servings, preparationTime, image, ingredientAmount } = recipe; 
+  const { name, content, cookTime, servings, preparationTime, image, ingredientAmount, description } = recipe; 
   
   const isNotVegan = checkForNegativeAttribute(ingredientAmount, "vegan");
   const isNotVegeterian = checkForNegativeAttribute(ingredientAmount, "vegeterian");
@@ -25,10 +25,11 @@ export const RecipeExtendedComponent = (props: Props) => {
           <Image src={image.url} alt="recipe_picture" layout="fill" className={styles.image}/>
         </div>
         <div  className={styles.icons_wrapper}>
+          <div className={styles.description}>{description}</div>
           <div>
-            <span> {!isNotVegan && "Dieet: VEGAN"}</span>
+            <span></span>
+            <span> Dieet: {!isNotVegan && "VEGAN, "} {!isNotVegeterian && "VEGETERIAN"}</span>
             <br/>
-            <span> {!isNotVegeterian && "Dieet: VEGETERIAN"}</span>
           </div>
           <div>
             <span>Servings: {servings} persons</span>
