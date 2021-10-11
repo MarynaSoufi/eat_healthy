@@ -13,7 +13,7 @@
   width: 68%;  
   
 }
-@media(max-width: 767px) {
+@media(max-width: 850px) {
   .image_wrapper {
     width: 100% !important; 
     
@@ -45,7 +45,7 @@
   
 }
 
-@media(max-width: 767px) {
+@media(max-width: 850px) {
   .icons_wrapper {
     width: 100%;
     display: flex;
